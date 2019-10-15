@@ -1,0 +1,26 @@
+  <div class="jumbotron">
+    <div class="container">
+      <form action="">
+        <div class="form-group my-2">
+          <label>Enter Login Name</label>
+          <input type="text" class="form-control" placeholder="Search git user" name="userName" [(ngModel)]="userName"
+            (keyup)="findUser()">
+          Login : {{user.login}}
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{{user.avatar_url}}" class="img-fluid">
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-secondary" (click)="fun1()">Repos</button>
+        <ul *ngFor="let repo of repos">
+          <li>{{repo.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
